@@ -1,0 +1,47 @@
+🚖 Urban Routes Test Automation
+
+
+📝 Descripción
+
+Automatización de pruebas para el flujo completo de solicitud de un taxi en la plataforma **Urban Routes**, desarrollada con **Selenium WebDriver** y el patrón **Page Object Model (POM)**.
+
+El escenario automatizado incluye:
+🗺️ Selección de ruta → 🚕 Solicitud de taxi → 📞 Confirmación por teléfono → 💳 Método de pago → 💬 Preferencias y comentarios.
+
+
+🧪 Tecnologías y Técnicas Utilizadas
+
+🐍 **Python**
+🌐 **Selenium WebDriver**
+🧱 **Page Object Model (POM)**
+⏳ **WebDriverWait** y **Expected Conditions**
+📋 **pytest** (opcional si deseas integrarlo)
+🛠️ **Chrome DevTools** para capturar el código de confirmación por número telefónico
+
+
+📂 Estructura del Proyecto
+
+project/
+└── qa-projects-Urban-Routes-es/
+├── data.py # Datos de entrada (direcciones, teléfono, tarjeta, mensaje)
+├── main.py # Función para recuperar código de verificación por teléfono
+├── test_urban_routes.py # Archivo principal de pruebas
+├── urban_routes_page.py # Page Object con todos los métodos y localizadores
+└── README.md # Este archivo
+
+📌 Características del Proyecto
+
+✅ Automatiza el escenario completo de solicitud de taxi
+✅ Interactúa con inputs, botones, modales, sliders y scroll
+✅ Usa al menos 4 tipos distintos de localizadores: `ID`, `CLASS_NAME`, `XPATH`, `CSS_SELECTOR`
+✅ Uso correcto de funciones de espera (`WebDriverWait`, `EC`)
+✅ Cumple con el estilo de código y buenas prácticas de nombres
+
+Ejecuta el archivo de prueba con:
+
+python test_urban_routes.py
+Nota: Asegúrate de tener el navegador Chrome y el driver actualizado.
+
+👤 Autor(a)
+Desarrollado por Sara Correa
+Bootcamp QA Engineer - TripleTen
