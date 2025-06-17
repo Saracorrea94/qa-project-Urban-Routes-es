@@ -197,28 +197,3 @@ class UrbanRoutesPage:
     #Espera a que aparezca el modal con la información del conductor.
     def wait_for_driver_info_modal(self):
         WebDriverWait(self.driver, 60).until(EC.text_to_be_present_in_element((By.CLASS_NAME, "order-header-title"), "El conductor llegará en"))
-
-    #Funciones de validación
-    def is_tariff_selected(self):
-        el = self.driver.find_element(*self.comfort_tariff)
-        clases = el.get_attribute("class")
-        return "selected" in clases or "active" in clases
-
-    def is_route_set(self, from_address, to_address):
-        from_value = self.driver.find_element(*self.from_field).get_property("value")
-        to_value = self.driver.find_element(*self.to_field).get_property("value")
-        return from_value == from_address and to_value == to_address
-
-    def is_searching_modal_visible(self):
-        try:
-            el = self.driver.find_element(*self.wait_for_modal)
-            return el.is_displayed() and "Buscar automóvil" in el.text
-        except NoSuchElementException:
-            return False
-
-    def is_driver_info_modal_visible(self):
-        try:
-            el = self.driver.find_element(*self.wait_for_modal)
-            return el.is_displayed() and "El conductor llegará en" in el.text
-        except NoSuchElementException:
-            return False
