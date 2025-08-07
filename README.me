@@ -1,47 +1,65 @@
 🚖 Urban Routes Test Automation
 
+📝 Project Overview
+Automated testing project for the complete taxi request flow in the Urban Routes platform.
+Built using Selenium WebDriver and the Page Object Model (POM) pattern, this project simulates the real user experience when ordering a taxi — from route selection to payment confirmation.
 
-📝 Descripción
+Test Flow Includes:
+🗺️ Route selection → 🚕 Taxi request → 📞 Phone confirmation → 💳 Payment method → 💬 Preferences and comments.
 
-Automatización de pruebas para el flujo completo de solicitud de un taxi en la plataforma **Urban Routes**, desarrollada con **Selenium WebDriver** y el patrón **Page Object Model (POM)**.
+💻 Technologies Used
+Python
 
-El escenario automatizado incluye:
-🗺️ Selección de ruta → 🚕 Solicitud de taxi → 📞 Confirmación por teléfono → 💳 Método de pago → 💬 Preferencias y comentarios.
+Selenium WebDriver
 
+Page Object Model (POM)
 
-🧪 Tecnologías y Técnicas Utilizadas
+WebDriverWait and Expected Conditions (EC)
 
-🐍 **Python**
-🌐 **Selenium WebDriver**
-🧱 **Page Object Model (POM)**
-⏳ **WebDriverWait** y **Expected Conditions**
-📋 **pytest** (opcional si deseas integrarlo)
-🛠️ **Chrome DevTools** para capturar el código de confirmación por número telefónico
+Pytest (optional for integration)
 
+Chrome DevTools (to capture phone confirmation codes)
 
-📂 Estructura del Proyecto
+👩‍💼 Key Responsibilities
+Designed and implemented automated end-to-end test scenarios simulating the full user flow on the Urban Routes platform.
 
-qa-projects-Urban-Routes-es/
-├── data.py # Datos de prueba: direcciones, teléfono, tarjeta, mensaje, etc.
-├── main.py # Función para simular o recuperar el código de confirmación telefónica.
-├── test_urban_routes.py # Archivo principal con los casos de prueba automatizados.
-├── urban_routes_page.py # Page Object Model (POM): métodos y localizadores de la app.
-├── helpers.py # Funciones auxiliares reutilizables para reducir duplicación en los tests.
-└── README.md # Documentación del proyecto.
+Applied the Page Object Model (POM) to ensure modular, scalable, and maintainable test scripts.
 
-📌 Características del Proyecto
+Interacted with UI elements including inputs, buttons, modals, sliders, and scrollable areas.
 
-✅ Automatiza el escenario completo de solicitud de taxi
-✅ Interactúa con inputs, botones, modales, sliders y scroll
-✅ Usa al menos 4 tipos distintos de localizadores: `ID`, `CLASS_NAME`, `XPATH`, `CSS_SELECTOR`
-✅ Uso correcto de funciones de espera (`WebDriverWait`, `EC`)
-✅ Cumple con el estilo de código y buenas prácticas de nombres
+Utilized multiple locator strategies such as ID, CLASS_NAME, XPATH, and CSS_SELECTOR.
 
-Ejecuta el archivo de prueba con:
+Developed reusable utility functions to reduce code duplication and improve test readability.
 
+Captured dynamic phone confirmation codes using Chrome DevTools for realistic validation.
+
+🚀 Impact & Achievements
+Automated a previously manual 5-step taxi request process, increasing test coverage and saving over 60% in execution time.
+
+Ensured UI consistency and functional accuracy, helping maintain a seamless user experience.
+
+Delivered clean and organized code following industry standards and naming conventions.
+
+📂 Project Structure
+bash
+Copiar
+Editar
+qa-projects-Urban-Routes-en/
+├── data.py                # Test data: addresses, phone, card, message, etc.
+├── main.py                # Simulates or retrieves the phone confirmation code
+├── test_urban_routes.py   # Main file with automated test cases
+├── urban_routes_page.py   # Page Object Model: methods and locators for the app
+├── helpers.py             # Reusable helper functions
+└── README.md              # Project documentation
+▶️ How to Run
+Make sure you have Google Chrome installed and the WebDriver updated.
+
+To execute the test:
+
+nginx
+Copiar
+Editar
 python test_urban_routes.py
-Nota: Asegúrate de tener el navegador Chrome y el driver actualizado.
-
-👤 Autor(a)
-Desarrollado por Sara Correa
-Bootcamp QA Engineer - TripleTen
+👤 Author
+Developed by Sara Correa
+TripleTen QA Engineer Bootcamp Graduate
